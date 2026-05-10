@@ -1,59 +1,367 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 💇‍♀️ A1 Salon & Academy Management System
 
-## About Laravel
+### Enterprise-Level Salon, Beauty Academy & Staff Management Platform
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+A complete Laravel-based management ecosystem designed for modern salons, beauty academies, staff payroll management, student administration, enquiry handling, and smart business operations.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+![Laravel](https://img.shields.io/badge/Laravel-Framework-red)
+![PHP](https://img.shields.io/badge/PHP-Backend-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Salon](https://img.shields.io/badge/Salon-Management-success)
+![Academy](https://img.shields.io/badge/Academy-System-purple)
+![Status](https://img.shields.io/badge/Project-Production_Ready-brightgreen)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+</div>
 
-## Learning Laravel
+---
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+# ✨ Platform Overview
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Salon & Academy Management System is a complete business management platform developed using Laravel.
 
-## Laravel Sponsors
+The system is designed for real-world salon and academy operations where:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+* 👨‍💼 Admin manages the complete platform
+* 💇‍♀️ Salon staff handle customer services
+* 👩‍🎓 Students join beauty academy courses
+* 👩‍🏫 Trainers manage classes and batches
+* 📚 Courses & batch scheduling are managed automatically
+* 💰 Staff salary and commission are calculated automatically
+* 📦 Billing, enquiries, attendance, certificates, and payments are fully managed
 
-### Premium Partners
+The platform combines salon operations and academy management into one enterprise-level ecosystem.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+# 🏢 Enterprise System Architecture
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```text
+                           ┌────────────────────┐
+                           │       ADMIN        │
+                           │ Complete Control   │
+                           └─────────┬──────────┘
+                                     │
+        ┌────────────────────────────┼────────────────────────────┐
+        │                            │                            │
+        ▼                            ▼                            ▼
 
-## Code of Conduct
+ ┌────────────────┐       ┌──────────────────┐       ┌────────────────┐
+ │ SALON SYSTEM   │       │ ACADEMY SYSTEM   │       │ ENQUIRY SYSTEM │
+ └──────┬─────────┘       └────────┬─────────┘       └──────┬─────────┘
+        │                          │                         │
+        ▼                          ▼                         ▼
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+ ┌────────────────┐       ┌──────────────────┐      ┌─────────────────┐
+ │ STAFF & CLIENT │       │ STUDENTS/BATCHES │      │ AUTO SCHEDULING │
+ │ MANAGEMENT     │       │ COURSES/TRAINERS │      │ FOLLOW UPS      │
+ └──────┬─────────┘       └────────┬─────────┘      └────────┬────────┘
+        │                          │                         │
+        └──────────────┬───────────┴──────────────┬──────────┘
+                       │                          │
+                       ▼                          ▼
 
-## Security Vulnerabilities
+             ┌──────────────────────────────────────┐
+             │    BILLING • PAYMENTS • SALARY       │
+             │ COMMISSION • CERTIFICATES • REPORTS  │
+             └──────────────────────────────────────┘
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+# 💇‍♀️ Salon Management System
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The platform contains a complete salon workflow with customer management, staff handling, service billing, salary calculation, and appointment scheduling.
+
+## Salon Features
+
+✅ Customer Management System
+✅ Salon Service Management
+✅ Staff Management
+✅ Appointment Scheduling
+✅ Auto Billing Generation
+✅ Invoice Management
+✅ Customer History Tracking
+✅ Service Reports
+✅ Staff Attendance
+✅ Salon Dashboard
+✅ Dark & Light Theme Support
+
+---
+
+# 👩‍💼 Staff Salary & Commission System
+
+The system supports both fixed salary and service-based commission workflows.
+
+## Salary Features
+
+✅ Fixed Salary System
+✅ Service-Based Commission
+✅ Automatic Monthly Salary Calculation
+✅ Commission Percentage Calculation
+✅ Salary Reports
+✅ Paid / Unpaid Salary Tracking
+✅ Salary Slip Generation
+✅ Staff Performance Reports
+
+---
+
+# 💰 Commission Workflow
+
+```text
+Customer Takes Service
+            │
+            ▼
+Service Bill Generated
+            │
+            ▼
+Commission Automatically Calculated
+            │
+ ┌──────────┼──────────┐
+ ▼          ▼          ▼
+
+Admin     Staff      Reports
+Revenue   Earnings   Updated
+```
+
+### Example
+
+If a service amount is ₹1000 and staff commission is 10%,
+then the staff automatically receives ₹100 commission.
+
+The system calculates all commissions automatically at month-end.
+
+---
+
+# 👩‍🎓 Academy Management System
+
+The academy module manages students, trainers, courses, batches, schedules, fees, and certificates.
+
+## Academy Features
+
+✅ Student Admission System
+✅ Course Management
+✅ Batch Management
+✅ Trainer / Teacher Management
+✅ Student Attendance
+✅ Class Scheduling
+✅ Course Duration Tracking
+✅ Student Fee Management
+✅ Pending Fee Tracking
+✅ Student Performance Monitoring
+✅ Certificate Generation System
+✅ Academy Dashboard
+
+---
+
+# 📚 Student Learning Workflow
+
+```text
+Student Enquiry
+        │
+        ▼
+Admission Process
+        │
+        ▼
+Course Selection
+        │
+        ▼
+Batch Assigned
+        │
+        ▼
+Trainer Assigned
+        │
+        ▼
+Class Schedule Management
+        │
+        ▼
+Fee Collection Workflow
+        │
+        ▼
+Course Completion
+        │
+        ▼
+Certificate Generated
+```
+
+---
+
+# 👩‍🏫 Trainer & Batch Management
+
+The academy includes complete trainer and class scheduling workflows.
+
+## Trainer Features
+
+✅ Trainer Management
+✅ Batch Assignment
+✅ Student Attendance Tracking
+✅ Class Scheduling
+✅ Course Monitoring
+✅ Batch Time Management
+✅ Student Progress Reports
+
+---
+
+# 📞 Enquiry & Follow-Up System
+
+The platform supports enquiries for both salon services and academy admissions.
+
+## Enquiry Features
+
+✅ Salon Enquiries
+✅ Academy Admission Enquiries
+✅ Auto Follow-Up Scheduling
+✅ Customer Follow-Up Tracking
+✅ Status Management
+✅ Lead Monitoring
+✅ Enquiry Dashboard
+
+---
+
+# 📦 Smart Billing & Invoice System
+
+The billing system automatically generates invoices and payment records.
+
+## Billing Features
+
+✅ Auto Invoice Generation
+✅ Service Billing
+✅ Payment Tracking
+✅ Due Payment Monitoring
+✅ Student Fee Receipts
+✅ Monthly Reports
+✅ Revenue Tracking
+
+---
+
+# 🔐 Authentication & Security System
+
+The platform includes secure role-based authentication.
+
+## Security Features
+
+✅ Admin Authentication
+✅ Staff Login System
+✅ Trainer Authentication
+✅ Student Login Access
+✅ Secure Password Protection
+✅ Role-Based Access Control
+✅ Middleware Protection
+✅ Secure Session Management
+
+---
+
+# 🎨 UI / UX Features
+
+The system provides a modern responsive interface.
+
+## Interface Features
+
+✅ Dark Theme Support
+✅ Light Theme Support
+✅ Responsive Dashboard Design
+✅ Modern User Interface
+✅ Mobile Friendly Layout
+✅ Professional Admin Panels
+
+---
+
+# 📊 Dashboard System
+
+Every role has a dedicated dashboard with specific permissions.
+
+## Dashboard Access
+
+✅ Admin Dashboard
+✅ Salon Staff Dashboard
+✅ Academy Dashboard
+✅ Trainer Dashboard
+✅ Student Dashboard
+
+---
+
+# ⚙️ Technology Stack
+
+## Backend
+
+* Laravel Framework
+* PHP
+* MySQL Database
+* MVC Architecture
+* RESTful Workflow
+
+## Frontend
+
+* Blade Templates
+* HTML5
+* CSS3
+* JavaScript
+* Bootstrap / Tailwind CSS
+
+## Additional Features
+
+* Authentication System
+* Auto Salary Calculation
+* Commission Workflow
+* Billing Management
+* Enquiry Management
+* Certificate Generation
+* Batch Scheduling
+* Attendance Management
+
+---
+
+# 🚀 Enterprise-Level Features
+
+✅ Advanced Salon Management System
+✅ Complete Beauty Academy Workflow
+✅ Automatic Salary Calculation
+✅ Staff Commission Management
+✅ Auto Invoice Generation
+✅ Smart Enquiry Management
+✅ Batch & Course Scheduling
+✅ Student Fee Tracking
+✅ Trainer Management System
+✅ Customer Relationship Management
+✅ Dark & Light Theme Support
+✅ Certificate Generation Workflow
+✅ Attendance Tracking System
+✅ Role-Based Authentication
+✅ Professional Dashboard System
+✅ Responsive Enterprise UI
+✅ High-Level Laravel MVC Architecture
+✅ Real Business Workflow Implementation
+
+
+---
+
+# 🎯 Vision & Purpose
+
+The goal of this platform is to provide a complete enterprise-level management ecosystem for salons and beauty academies.
+
+The system helps businesses:
+
+* Manage salon operations efficiently
+* Handle academy students and courses professionally
+* Track staff salaries and commissions automatically
+* Manage enquiries and follow-ups smartly
+* Generate certificates and invoices automatically
+* Monitor complete business operations from one dashboard
+
+This project combines salon management, academy administration, payroll systems, enquiry tracking, and enterprise workflows into one complete Laravel-based solution.
+
+---
+
+# 👨‍💻 Developer
+
+## Ayesha Siddiqui
+
+GitHub:
+[https://github.com/aayasha-siddiqui](https://github.com/aayasha-siddiqui)
+
+---
+
+# 📄 License
+
+This project is developed for educational, portfolio, and advanced commercial learning purposes.
