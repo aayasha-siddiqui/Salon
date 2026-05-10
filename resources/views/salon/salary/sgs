@@ -1,0 +1,144 @@
+@extends('salon.layouts.app')
+
+@section('content')
+
+<div class="container py-4">
+
+<div class="card shadow p-4">
+
+<h4>💰 Generate Salary</h4>
+
+<form method="POST" action="{{ route('salary.calculate') }}">
+@csrf
+
+<div class="row mb-3">
+
+<div class="col-md-4">
+<select name="staff_id" class="form-control" required>
+<option value="">Select Staff</option>
+@foreach($staffs as $staff)
+<option value="{{ $staff->id }}"
+@if(isset($selectedStaff) && $selectedStaff->id==$staff->id) selected @endif>
+{{ $staff->name }}
+</option>
+@endforeach
+</select>
+</div>
+
+<div class="col-md-4">
+<input type="month" name="month"
+value="{{ $month ?? '' }}"
+class="form-control" required>
+</div>
+
+<div class="col-md-4">
+<button class="btn btn-dark w-100">
+Generate
+</button>
+</div>
+
+</div>
+
+</form>
+
+@if(isset($selectedStaff))
+
+<hr>
+
+<h5>Salary Details</h5>
+
+<table class="table table-bordered">
+
+<tr>
+<th>Total Service</th>
+<td>₹{{ number_format($totalService,2) }}</td>
+</tr>
+
+<tr>
+<th>Jobs Done</th>
+<td>{{ $totalJobs }}</td>
+</tr>
+
+<tr>
+<th>Salary Type</th>
+<td>{{ ucfirst($selectedStaff->salary_type) }}</td>
+</tr>
+
+@if($selectedStaff->salary_type=='commission')
+<tr>
+<th>Commission %</th>
+<td>{{ $commission }}%</td>
+</tr>
+@endif
+
+<tr>
+<th>Base Salary</th>
+<td>₹{{ number_format($baseSalary,2) }}</td>
+</tr>
+
+</table>
+
+<form method="POST" action="{{ route('salary.store') }}">
+@csrf
+
+<input type="hidden" name="staff_id"
+value="{{ $selectedStaff->id }}">
+
+<input type="hidden" name="month"
+value="{{ $month }}">
+
+<input type="hidden" name="final_salary"
+id="finalSalaryHidden"
+value="{{ $baseSalary }}">
+
+<div class="row">
+
+<div class="col-md-4">
+<label>Bonus</label>
+<input type="number"
+name="bonus"
+id="bonusInput"
+class="form-control"
+value="0"
+oninput="calc()">
+</div>
+
+<div class="col-md-4">
+<label>Final Salary</label>
+<input type="text"
+id="finalSalary"
+class="form-control"
+value="{{ number_format($baseSalary,2) }}"
+readonly>
+</div>
+
+<div class="col-md-4 d-flex align-items-end">
+<button class="btn btn-success w-100">
+Save Salary
+</button>
+</div>
+
+</div>
+
+</form>
+
+@endif
+
+</div>
+</div>
+
+<script>
+function calc(){
+let base = {{ $baseSalary ?? 0 }};
+let bonus = parseFloat(document.getElementById('bonusInput').value)||0;
+let final = base + bonus;
+
+document.getElementById('finalSalary').value =
+final.toFixed(2);
+
+document.getElementById('finalSalaryHidden').value =
+final;
+}
+</script>
+
+@endsection
